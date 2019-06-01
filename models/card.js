@@ -1,7 +1,15 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   const Card = sequelize.define('Card', {
-    name: DataTypes.STRING
+    id: DataTypes.INTEGER,
+    name: DataTypes.STRING,
+    meaning: DataTypes.TEXT,
+    phrase: DataTypes.TEXT,
+    description: DataTypes.TEXT,
+    file_audio: DataTypes.STRING,
+    file_image: DataTypes.STRING,
+    createdAt: DataTypes.DATETIME,
+    updateAt: DataTypes.DATETIME,
   }, {});
   Card.associate = function(models) {
     // associations can be defined here
