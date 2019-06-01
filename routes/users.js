@@ -8,9 +8,10 @@ router.get('/', function(req, res, next) {
   res.send('respond with a resource');
 });
 
-
-
-router.get('/test', UserController.hola);
-
+router.get('/login/:username/:pass', UserController.login);
+router.post('/getAll', UserController.getAll);
+router.post('/getByID/:id', UserController.getByID);
+router.get('/deleteUser/:id', UserController.deleteUser);
+router.put('/updateUser/:id', UserController.updateUser);
 
 module.exports = router;
