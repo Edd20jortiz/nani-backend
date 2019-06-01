@@ -8,8 +8,8 @@ module.exports = (sequelize, DataTypes) => {
     description: DataTypes.TEXT,
     file_audio: DataTypes.STRING,
     file_image: DataTypes.STRING,
-    createdAt: DataTypes.DATETIME,
-    updateAt: DataTypes.DATETIME,
+    createdAt: DataTypes.DATE,
+    updateAt: DataTypes.DATE
   }, {});
   Card.associate = function(models) {
     // associations can be defined here
